@@ -1,4 +1,4 @@
-import { LoadPeople } from '../../../domain/usecases/load-people'
+import { LoadPeople } from '../../../domain/usecases/people/load-people'
 import { PeopleModel } from '../../../domain/models/people'
 import { LoadPeopleRepository } from '../../protocols/db/people/load-people-repository'
 

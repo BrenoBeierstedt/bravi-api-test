@@ -11,7 +11,6 @@ const main = async () => {
       data: {
         firstName: people.firstName,
         lastName: people.firstName,
-        profilePicture: people.profilePicture,
         updatedAt: new Date(),
         contactInfos: {
           create: [

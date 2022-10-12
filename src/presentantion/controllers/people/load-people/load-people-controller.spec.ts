@@ -8,7 +8,6 @@ const makeFakePeoples = (): PeopleModel[] => {
     id: 'some_id',
     firstName: 'some_first_name',
     lastName: 'some_last_name',
-    profilePicture: 'https://robohash.org/liberoquameligendi.png?size=100x100&set=set1',
     createdAt: new Date(),
     updatedAt: new Date()
   },
@@ -16,7 +15,6 @@ const makeFakePeoples = (): PeopleModel[] => {
     id: 'another_id',
     firstName: 'another_first_name',
     lastName: 'another_last_name',
-    profilePicture: 'https://robohash.org/liberoquameligendi.png?size=100x100&set=set1',
     createdAt: new Date(),
     updatedAt: new Date()
   }
@@ -75,6 +73,6 @@ describe('LoadPeople Controller', () => {
     const { sut, loadPeoplesStub } = makeSut()
     jest.spyOn(loadPeoplesStub, 'load').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
     const httpResponse = await sut.handle({})
-    expect(httpResponse).toEqual(serverError())
+    expect(httpResponse).toEqual(serverError(new Error()))
   })
 })

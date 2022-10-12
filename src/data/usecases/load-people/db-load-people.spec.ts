@@ -2,12 +2,11 @@ import { LoadPeopleRepository } from '../../protocols/db/people/load-people-repo
 import { PeopleModel } from '../../../domain/models/people'
 import { DbLoadPeople } from './db-load-people'
 
-const makeFakeExample = (): PeopleModel[] => {
+const makeFakePeople = (): PeopleModel[] => {
   return [{
     id: 'some_id',
     firstName: 'some_first_name',
     lastName: 'some_last_name',
-    profilePicture: 'https://robohash.org/liberoquameligendi.png?size=100x100&set=set1',
     createdAt: new Date(),
     updatedAt: new Date()
   },
@@ -15,7 +14,6 @@ const makeFakeExample = (): PeopleModel[] => {
     id: 'another_id',
     firstName: 'another_first_name',
     lastName: 'another_last_name',
-    profilePicture: 'https://robohash.org/liberoquameligendi.png?size=100x100&set=set1',
     createdAt: new Date(),
     updatedAt: new Date()
   }
@@ -30,7 +28,7 @@ interface SutTypes {
 const makeLoadPeopleRepository = (): LoadPeopleRepository => {
   class LoadPeopleRepositoryStub implements LoadPeopleRepository {
     async loadAll (): Promise<PeopleModel[]> {
-      return new Promise<PeopleModel[]>((resolve) => resolve(makeFakeExample()))
+      return new Promise<PeopleModel[]>((resolve) => resolve(makeFakePeople()))
     }
   }
   return new LoadPeopleRepositoryStub()
@@ -42,18 +40,18 @@ const makeSut = (): SutTypes => {
   return { sut, loadPeopleRepositorystub }
 }
 
-describe('DbLoadExample', () => {
-  test('Should call LoadExampleRepository', async () => {
+describe('DbLoadPeople', () => {
+  test('Should call LoadPeopleRepository', async () => {
     const { sut, loadPeopleRepositorystub } = makeSut()
     const loadAllSpy = jest.spyOn(loadPeopleRepositorystub, 'loadAll')
     await sut.load()
     expect(loadAllSpy).toHaveBeenCalled()
   })
 
-  test('Should return a list of Example on success', async () => {
+  test('Should return a list of People on success', async () => {
     const { sut } = makeSut()
-    const example = await sut.load()
-    expect(example).toEqual(makeFakeExample())
+    const people = await sut.load()
+    expect(people).toEqual(makeFakePeople())
   })
 
   test('Should throw if LoadPeopleRepository throws', async () => {

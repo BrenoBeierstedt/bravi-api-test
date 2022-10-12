@@ -9,7 +9,7 @@ export class LoadPeopleController implements Controller {
       const peoples = await this.loadPeoples.load()
       return peoples.length ? ok(peoples) : noContent()
     } catch (err) {
-      return serverError()
+      return serverError(err)
     }
   }
 }
