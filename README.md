@@ -2,7 +2,7 @@
 
 Você pode testar esta aplicação [aqui](https://bravi-api.2b-soft.com)
 
-Repositório projeto WEB: [bravi-web](https://github.com/BrenoBeierstedt/bravi-api-test)
+Repositório projeto WEB: [bravi-web](https://github.com/BrenoBeierstedt/bravi-web-test)
 
 ## Comandos
 
