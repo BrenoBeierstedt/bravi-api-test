@@ -1,0 +1,5 @@
+export * from './add-contact-info/add-contact-info-controller-factory'
+export * from './load-contact-info/load-contact-info-controller-factory'
+export * from './load-contact-by-people-id/load-people-controller-factory'
+export * from './update-contact-info/update-contact-info-controller-factory'
+export * from './delete-contact-info/delete-contact-info-controller-factory'

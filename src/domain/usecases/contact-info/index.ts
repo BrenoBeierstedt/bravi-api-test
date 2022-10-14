@@ -1,0 +1,5 @@
+export * from './add-contact-info/add-contact-info'
+export * from './load-contact-info/load-contact-info'
+export * from './update-contact-info/update-contact-info'
+export * from './delete-contact-info/delete-contact-info'
+export * from './load-contact-by-people-id/load-contact-by-people-id'

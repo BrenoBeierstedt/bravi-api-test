@@ -1,2 +1,5 @@
 export * from './add-people/add-people-controller-factory'
 export * from './load-people/load-people-controller-factory'
+export * from './load-singular-people/load-people-controller-factory'
+export * from './update-people/update-people-controller-factory'
+export * from './delete-people/delete-people-controller-factory'

@@ -1,2 +1,5 @@
-export * from './load-people-repository'
-export * from './add-people-repository'
+export * from './load-people-repository/load-people-repository'
+export * from './add-people-repository/add-people-repository'
+export * from './load-singular-people-repository/load-people-repository'
+export * from './update-people-repository/update-people-repository'
+export * from './delete-people-repository/delete-people-repository'

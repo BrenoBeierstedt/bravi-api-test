@@ -1,7 +1,7 @@
 import { AddPeopleController } from './add-people-controller'
 import { AddPeople, HttpRequest, AddPeopleModel } from './add-people-controller-protocols'
 import { badRequest, noContent, serverError } from '../../../helpers/http-helper'
-import { Validation } from '../../../protocols/validation'
+import { Validation } from '../../../protocols'
 
 const makeFakeRequest = (): HttpRequest => ({
   body: {

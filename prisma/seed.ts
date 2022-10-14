@@ -10,12 +10,12 @@ const main = async () => {
     await prisma.people.create({
       data: {
         firstName: people.firstName,
-        lastName: people.firstName,
+        lastName: people.lastName,
         updatedAt: new Date(),
         contactInfos: {
           create: [
             {
-              type: 'whatsapp',
+              type: 'Whatsapp',
               info: faker.phone.number('+55###########'),
               updatedAt: new Date()
             }

@@ -1,0 +1,5 @@
+export * from './load-singular-people/load-singular-people'
+export * from './add-people/add-people'
+export * from './load-people/load-people'
+export * from './update-people/update-people'
+export * from './delete-people/delete-people'
